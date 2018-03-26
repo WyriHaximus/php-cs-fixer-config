@@ -1,0 +1,102 @@
+{
+  "name": "api-clients/cs-fixer-config",
+  "description": "friendsofphp/php-cs-fixer config",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cees-Jan Kiewiet",
+      "email": "ceesjank@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "friendsofphp/php-cs-fixer": "^2.5"
+  },
+  "require-dev": {
+    "api-clients/test-utilities": "^4.3"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "ApiClients\\Tools\\CsFixerConfig\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ApiClients\\Tests\\Tools\\CsFixerConfig\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "composer normalize"
+    ],
+    "post-install-cmd": [
+      "composer normalize"
+    ],
+    "ensure-installed": "composer install --ansi -n -q",
+    "cs": [
+      "@ensure-installed",
+      "php-cs-fixer fix --config=.php_cs --ansi --dry-run --diff --verbose --allow-risky=yes --show-progress=estimating"
+    ],
+    "cs-fix": [
+      "@ensure-installed",
+      "php-cs-fixer fix --config=.php_cs --ansi --verbose --allow-risky=yes --show-progress=estimating"
+    ],
+    "unit": [
+      "@ensure-installed",
+      "phpunit --colors=always -c phpunit.xml.dist"
+    ],
+    "unit-coverage": [
+      "@ensure-installed",
+      "phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml"
+    ],
+    "lint-php": [
+      "@ensure-installed",
+      "parallel-lint --exclude vendor ."
+    ],
+    "infection": [
+      "@ensure-installed",
+      "infection --ansi --threads=4"
+    ],
+    "qa-all": [
+      "composer validate --ansi",
+      "composer normalize --ansi",
+      "@lint-php",
+      "@cs",
+      "@unit"
+    ],
+    "qa-all-extended": [
+      "composer validate --ansi",
+      "composer normalize --ansi",
+      "@lint-php",
+      "@cs",
+      "@unit-coverage",
+      "@infection"
+    ],
+    "qa-windows": [
+      "@lint-php",
+      "@cs",
+      "@unit"
+    ],
+    "qa-ci": [
+      "@unit"
+    ],
+    "qa-ci-extended": [
+      "@qa-all-extended"
+    ],
+    "qa-ci-windows": [
+      "@qa-windows"
+    ],
+    "qa-contrib": [
+      "@qa-all"
+    ],
+    "ci-coverage": [
+      "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
+    ]
+  }
+}
