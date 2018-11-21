@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf1dab1f5031c4f95ebe799b3c979174",
+    "content-hash": "fb767a39a1e97bd1b1a29a5e27efecb3",
     "packages": [
         {
             "name": "composer/semver",
@@ -3640,10 +3640,10 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0"
+        "php": "^7.2"
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.0"
+        "php": "7.2"
     }
 }
