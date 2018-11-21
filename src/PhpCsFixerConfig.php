@@ -43,6 +43,7 @@ final class PhpCsFixerConfig
                 'single_quote' => true,
                 'strict_param' => true,
                 'trailing_comma_in_multiline_array' => true,
+                'native_function_invocation' => true,
             ] + $extraRules
         );
     }
