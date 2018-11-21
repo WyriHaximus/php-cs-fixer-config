@@ -6,9 +6,6 @@ use PhpCsFixer\Config;
 
 final class PhpCsFixerConfig
 {
-    /**
-     * @return Config
-     */
     public static function create(array $extraRules = []): Config
     {
         return Config::create()
@@ -44,6 +41,20 @@ final class PhpCsFixerConfig
                 'strict_param' => true,
                 'trailing_comma_in_multiline_array' => true,
                 'native_function_invocation' => true,
+                'no_php4_constructor' => true,
+                'no_short_echo_tag' => true,
+                'no_useless_return' => true,
+                'php_unit_internal_class' => true,
+                'php_unit_method_casing' => true,
+                'php_unit_set_up_tear_down_visibility' => true,
+                'protected_to_private' => true,
+                'simplified_null_return' => true,
+                'void_return' => true,
+                'combine_nested_dirname' => true,
+                'pow_to_exponentiation' => true,
+                'random_api_migration' => true,
+                'ternary_to_null_coalescing' => true,
+                'visibility_required' => true,
             ] + $extraRules
         );
     }
