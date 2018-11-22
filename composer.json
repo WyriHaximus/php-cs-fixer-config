@@ -13,7 +13,7 @@
     "friendsofphp/php-cs-fixer": "^2.5"
   },
   "require-dev": {
-    "api-clients/test-utilities": "^4.3"
+    "api-clients/test-utilities": "^5.1"
   },
   "config": {
     "platform": {
