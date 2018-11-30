@@ -41,6 +41,7 @@ final class PhpCsFixerConfig
                 'strict_param' => true,
                 'trailing_comma_in_multiline_array' => true,
                 'native_function_invocation' => true,
+                'native_constant_invocation' => true,
                 'no_php4_constructor' => true,
                 'no_short_echo_tag' => true,
                 'no_useless_return' => true,
