@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": "^7.2",
-    "friendsofphp/php-cs-fixer": "^2.5"
+    "friendsofphp/php-cs-fixer": "^2.13"
   },
   "require-dev": {
     "api-clients/test-utilities": "^5.1"
