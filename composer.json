@@ -13,7 +13,7 @@
     "friendsofphp/php-cs-fixer": "^2.14"
   },
   "require-dev": {
-    "wyrihaximus/test-utilities": "dev-master"
+    "wyrihaximus/test-utilities": "^1.0"
   },
   "config": {
     "platform": {

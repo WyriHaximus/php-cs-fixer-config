@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "605178ac70eb7f088266b76f27b0271b",
+    "content-hash": "9a75de6dea368e22f62084ff9d6c9782",
     "packages": [
         {
             "name": "composer/semver",
@@ -4562,16 +4562,16 @@
         },
         {
             "name": "wyrihaximus/test-utilities",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-test-utilities.git",
-                "reference": "ba9dfba85c494e1fa1b58d56ea8fa0beb292a4eb"
+                "reference": "ea99ec37a9ea57cc1ddbdd63a5aaf9e6a6579599"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/ba9dfba85c494e1fa1b58d56ea8fa0beb292a4eb",
-                "reference": "ba9dfba85c494e1fa1b58d56ea8fa0beb292a4eb",
+                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/ea99ec37a9ea57cc1ddbdd63a5aaf9e6a6579599",
+                "reference": "ea99ec37a9ea57cc1ddbdd63a5aaf9e6a6579599",
                 "shasum": ""
             },
             "require": {
@@ -4584,7 +4584,7 @@
                 "localheinz/composer-normalize": "^1.0.0",
                 "nunomaduro/collision": "^2.1",
                 "php": "^7.2",
-                "phpstan/phpstan": "^0.10.7",
+                "phpstan/phpstan": "^0.10.7 || ^0.11.0",
                 "phpunit/phpunit": "^7.5"
             },
             "type": "library",
@@ -4604,14 +4604,12 @@
                 }
             ],
             "description": "Test utilities for api-clients packages",
-            "time": "2019-01-13T21:03:33+00:00"
+            "time": "2019-01-20T17:22:49+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wyrihaximus/test-utilities": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
