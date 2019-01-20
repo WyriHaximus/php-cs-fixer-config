@@ -24,7 +24,10 @@
   "autoload": {
     "psr-4": {
       "WyriHaximus\\CsFixerConfig\\": "src/"
-    }
+    },
+    "files": [
+      "src/rules_include.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
